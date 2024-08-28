@@ -42,6 +42,7 @@ class AuthorResource extends Resource
     {
         return $table
             ->columns([
+
                 Tables\Columns\TextColumn::make('name')
                     ->searchable(),
                 Tables\Columns\TextColumn::make('slug')
@@ -62,6 +63,8 @@ class AuthorResource extends Resource
                     ->dateTime()
                     ->sortable()
                     ->toggleable(isToggledHiddenByDefault: true),
+
+                
             ])
             ->filters([
                 //

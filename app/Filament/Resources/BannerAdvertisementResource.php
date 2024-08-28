@@ -60,7 +60,13 @@ class BannerAdvertisementResource extends Resource
                     ->searchable(),
                 Tables\Columns\ImageColumn::make('thumbnail')
                     ->searchable(),
-                Tables\Columns\TextColumn::make('is_active'),
+                Tables\Columns\TextColumn::make('is_active')
+                ->badge()
+                ->color(fn (String $state): String => match ($state){
+                    'featured' => 'succes',
+                    'not_featured' => 'danger',
+
+                }),
                 Tables\Columns\TextColumn::make('deleted_at')
                     ->dateTime()
                     ->sortable()
@@ -73,6 +79,8 @@ class BannerAdvertisementResource extends Resource
                     ->dateTime()
                     ->sortable()
                     ->toggleable(isToggledHiddenByDefault: true),
+
+
             ])
             ->filters([
                 //
