@@ -2,23 +2,20 @@
 
 namespace App\Filament\Resources;
 
+use App\Filament\Resources\BannerAdvertisementResource\Pages;
+use App\Filament\Resources\BannerAdvertisementResource\RelationManagers;
+use App\Models\BannerAdvertisement;
 use Filament\Forms;
-use Filament\Tables;
-use Filament\Forms\Set;
-use App\Models\Category;
 use Filament\Forms\Form;
-use Filament\Tables\Table;
-use Illuminate\Support\Str;
 use Filament\Resources\Resource;
-use Forms\Components\FileUpload;
+use Filament\Tables;
+use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
-use App\Filament\Resources\CategoryResource\Pages;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
-use App\Filament\Resources\CategoryResource\RelationManagers;
 
-class CategoryResource extends Resource
+class BannerAdvertisementResource extends Resource
 {
-    protected static ?string $model = Category::class;
+    protected static ?string $model = BannerAdvertisement::class;
 
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
 
@@ -26,16 +23,30 @@ class CategoryResource extends Resource
     {
         return $form
             ->schema([
-                Forms\Components\TextInput::make('name')
-                    ->required()
-                    ->live(debounce:250 )
-                    ->maxLength(255),
-                    Forms\Components\FileUpload::make('icon')
-                    ->image()
+                Forms\Components\TextInput::make('link')
+                        ->activeUrl()
+                        ->required()
+                        ->maxLength(255),
+                Forms\Components\FileUpload::make('thumbnail')
+                        ->required()
+                        ->image(),
+                Forms\Components\Select::make('type')
+                    ->options(
+                    [
+                        'banner' => 'Banner',
+                        'square' => 'Square',
+                    ]
+                )
+                        ->required(),
+
+
+                Forms\Components\Select::make('is_active')
+                ->options(
+                    ['active' => 'Active',
+                    'not_active' => 'Not active',
+                    ]
+                )
                     ->required(),
-                Forms\Components\TextInput::make('slug')
-                    ->required()
-                    ->maxLength(255),
             ]);
     }
 
@@ -43,12 +54,13 @@ class CategoryResource extends Resource
     {
         return $table
             ->columns([
-                Tables\Columns\TextColumn::make('name')
+                Tables\Columns\TextColumn::make('link')
                     ->searchable(),
-                Tables\Columns\ImageColumn::make('icon')
+                Tables\Columns\TextColumn::make('type')
                     ->searchable(),
-                Tables\Columns\TextColumn::make('slug')
+                Tables\Columns\ImageColumn::make('thumbnail')
                     ->searchable(),
+                Tables\Columns\TextColumn::make('is_active'),
                 Tables\Columns\TextColumn::make('deleted_at')
                     ->dateTime()
                     ->sortable()
@@ -86,9 +98,10 @@ class CategoryResource extends Resource
     public static function getPages(): array
     {
         return [
-            'index' => Pages\ListCategories::route('/'),
-            'create' => Pages\CreateCategory::route('/create'),
-            'edit' => Pages\EditCategory::route('/{record}/edit'),
+            'index' => Pages\ListBannerAdvertisements::route('/'),
+            'create' => Pages\CreateBannerAdvertisement::route('/create'),
+            'edit' => Pages\EditBannerAdvertisement::route('/{record}/edit'),
         ];
-    }
+
+   }
 }
