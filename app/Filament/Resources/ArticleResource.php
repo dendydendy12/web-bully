@@ -82,7 +82,8 @@ class ArticleResource extends Resource
                 Tables\Columns\TextColumn::make('name')
                     ->searchable(),
                 Tables\Columns\TextColumn::make('thumbnail')
-                    ->searchable(),
+                    ->searchable()
+                    ,
                 Tables\Columns\TextColumn::make('is_featured')
                 ->badge()
                 ->color(fn (String $state): String => match ($state){

@@ -60,13 +60,15 @@ class BannerAdvertisementResource extends Resource
                     ->searchable(),
                 Tables\Columns\ImageColumn::make('thumbnail')
                     ->searchable(),
-                Tables\Columns\TextColumn::make('is_active')
-                ->badge()
-                ->color(fn (String $state): String => match ($state){
-                    'featured' => 'succes',
-                    'not_featured' => 'danger',
 
-                }),
+                Tables\Columns\TextColumn::make('is_active')
+                    ->badge()
+                    ->color(fn (String $state): String => match ($state) {
+                        'active' => 'success',
+                        'not_active' => 'danger',
+                        default => 'secondary', // Fallback color
+                    }),
+
                 Tables\Columns\TextColumn::make('deleted_at')
                     ->dateTime()
                     ->sortable()
