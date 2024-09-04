@@ -30,7 +30,7 @@ class Article extends Model
         return $this->belongsTo(Category::class, 'category_id');
     }
 
-    public function Author (): BelongsTo
+    public function author (): BelongsTo
     {
         return $this->belongsTo(Author::class, 'author_id');
     }

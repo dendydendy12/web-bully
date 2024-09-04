@@ -81,7 +81,7 @@ class ArticleResource extends Resource
             ->columns([
                 Tables\Columns\TextColumn::make('name')
                     ->searchable(),
-                Tables\Columns\TextColumn::make('thumbnail')
+                Tables\Columns\ImageColumn::make('thumbnail')
                     ->searchable()
                     ,
                 Tables\Columns\TextColumn::make('is_featured')

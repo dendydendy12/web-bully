@@ -5,6 +5,8 @@ use App\Models\BannerAdvertisement;
 use App\Models\Category;
 use App\Models\Article;
 use App\Models\Author;
+use App\Models\Report;
+use App\Models\Video;
 use Illuminate\Http\Request;
 
 class FrontController extends Controller
@@ -44,6 +46,7 @@ $bullying_articles = Article::whereHas('category', function ($query) {
 
 $bullying_featured_articles = Article::whereHas('category', function ($query) {
     $query->where('name', 'bullying');
+    
 })
 ->where('is_featured', 'featured')
 ->inRandomOrder()
@@ -52,15 +55,68 @@ $bullying_featured_articles = Article::whereHas('category', function ($query) {
 // Correct the view call here
 return view('front.index', compact('categories', 'articles', 'authors', 'featured_articles', 'bannerads', 'bullying_articles', 'bullying_featured_articles'));
 }
-        
-public function category(Category $category){
+      
+public function category($slug){
+    $category = Category::where('slug', $slug)->first();
+    $categories = Category::all();
+    $bannerads = BannerAdvertisement::where('is_active', 'active') 
+    ->inRandomOrder()
+    ->first();
+    $videos = '';
+    if($slug == 'video' ) {
+        $videos = Video::all();
+    }
+ 
+    return view('front.category', compact('category', 'categories','bannerads','videos'));
+}
+
+public function details($slug){
+    $article = Article::where('slug', $slug)->first();
+    $articles = Article::all();
+    $bannerads = BannerAdvertisement::where('is_active', 'active');
+    $categories = Category::all();
+    
+    return view('front.details', compact('article','categories', 'bannerads', 'articles'));
+}
+public function author(Author $author){
     $categories = Category::all();
     $bannerads = BannerAdvertisement::where('is_active', 'active')
     ->inRandomOrder()
     ->first();
-    return view('front.category', compact('category', 'categories'));
+    return view ('front.author', compact('categories', 'author', 'bannerads'));
+    
+}
+public function about(){
+    return view('front.about');
 }
 
+ // Method untuk menampilkan form laporan bullying
+    public function showReportForm()
+    {
+        return view('front.report');
     }
+
+    // Method untuk menangani pengiriman laporan bullying
+    public function submitReport(Request $request)
+    {
+        $validatedData = $request->validate([
+            'name' => 'required|string|max:255',
+            'email' => 'required|email|max:255',
+            'incident' => 'required|string',
+            'location' => 'required|string|max:255',
+            'date' => 'required|date',
+            'anonymous' => 'required|boolean',
+        ]);
+
+        Report::create($validatedData);
+
+        return redirect()->route('front.report')->with('success', 'Laporan Anda telah berhasil dikirim.');
+    }
+}
+
+
+
+
+    
     
      

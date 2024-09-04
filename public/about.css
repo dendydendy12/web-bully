@@ -1,0 +1,218 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Roboto+Flex:opsz,wght@8..144,300&display=swap');
+
+.page-title{
+    text-align: center;
+}
+
+.page-title h2{
+    margin-bottom: 5px;
+}
+
+.container{
+    margin: 0%;
+    display: flex;
+    gap:50px;
+    background-color: #f2eeee;
+}
+
+.container-left{
+    width: 50%;
+    display: flex;
+    align-items: center;
+    padding-right: 10%;
+    margin: 40px;
+}
+
+.container-right{
+    /* width: 50%; */
+    padding: 0px 60px;
+    border-radius: 100px;
+    display: flex;
+    
+    
+}
+.container-right img {
+    border-radius: 150px;
+    margin-left: 10px;
+    /* box-shadow: 1px 1px 7px 0 #2F59A7; */
+}
+.container-video video {
+    border-radius: 50px;
+    margin-left: 20px;
+    box-shadow: 1px 1px 7px 0 #2F59A7;
+    display: flex;
+}
+
+.text{
+    color: #000000;
+    margin-bottom: 40px;
+    text-align: left;
+}
+.text h1 {
+    font-size: 90px;
+    font-family: 'poppins';
+}
+
+
+.title{
+    text-align: center;
+    font-size: 20;
+    font-family: Arial, Helvetica, sans-serif;
+    color:black;
+}
+
+.h2{
+    font-family: Arial, Helvetica, sans-serif;
+    color: black;
+    text-align: center;
+    font-weight: 600;
+}
+
+.text-blue{
+    color:#0076f0;
+}
+
+.team-container{
+    background-color: transparent;
+    padding: 50px;
+ /* box-shadow: 1px 1px 7px 0 #2F59A7; */
+ background-color: #cccccc;
+}
+
+.card-group{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding: 1px;
+    margin: 80px 1px;
+}
+
+.card{
+    width: 280px;
+    margin:10px;
+    padding: 0;
+    border-radius: 5px;
+    box-shadow: 1px 1px 7px 0 #2F59A7;
+    background-color: #fff;
+    transition: all 0.3s ease-in;
+}
+
+.card:hover{
+    box-shadow: 1px 1px 7px 0 grey;
+    background-color: rgb(167, 99, 47);
+}
+
+.card:hover .card-body h3, .card:hover .card-body p, .card:hover .card-socmed i{
+    color: #eee;
+}
+
+.card-img img{
+    width:120px;
+    height: 120px;
+    border-radius: 50%;
+    display: block;
+    margin: -30px auto 0px auto;
+}
+
+.card-body{
+    text-align: center;
+    padding: 0;
+}
+
+.card-body h3{
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 20px 0 0 0;
+}
+
+.team-position{
+    font-size: 1.3rem;
+    font-weight: 200;
+    margin: 0;
+    color: #7a7a7a;
+}
+
+.text-card{
+    text-align: center;
+}
+
+.card-socmed{
+    display: flex;
+    justify-content: space-evenly;
+    margin: 40px 20px;
+    background-color: #7a7a7a;
+}
+
+.card-socmed i{
+    font-size: 1.5rem;
+    color: #7a7a7a;
+}
+
+.card-socmed i:hover{
+    color: #0076f0;
+    
+}
+.text1{
+    text-align: center;
+    font-family: 'poppins';
+    font-size: 30px;
+
+}
+
+.LawanBullying img {
+    width: 100%;
+    height: 600px;
+    margin: 0px;
+   
+}
+@keyframes fade {
+    from{
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0px);
+    } 
+}
+
+/* Tampilan tablet */
+@media screen and (max-width: 768px){
+    .container{
+        margin: 0;
+        padding: 20px;
+    }
+    .Teman img {
+        width: 100%;
+        height: 400px;
+    }
+
+    .container-right{
+        display: none;
+    }
+.container-video video {
+
+   width: 90%;
+   height: 90%;
+}
+    .container-left{
+        width: 90%;
+        padding: 0;
+    }
+
+    .card{
+        margin-bottom: 30px;
+    }
+    .konten {
+        margin: 0;
+        padding: 20px;
+    }
+    .foto {
+        display: none;
+
+    }
+    .container img {
+        display: none;
+    }
+}

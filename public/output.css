@@ -1225,7 +1225,7 @@ video {
 }
 
 .hover\:shadow-\[0_10px_20px_0_\#FF6B1880\]:hover {
-  --tw-shadow: 0 10px 20px 0 #FF6B1880;
+  --tw-shadow: 0 10px 20px 0 #403aee80;
   --tw-shadow-colored: 0 10px 20px 0 var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
