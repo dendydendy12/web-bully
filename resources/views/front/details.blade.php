@@ -45,7 +45,7 @@
             <a href=""
                 class="rounded-full p-[12px_22px] flex gap-[10px] font-bold transition-all duration-300 bg-[#FF6B18] text-white hover:shadow-[0_10px_20px_0_#0B2F9F]">
                 <div class="w-6 h-6 flex shrink-0">
-                    <img src="{{ asset('assets/images/icons/favorite-chart.svg') }}" alt="icon" />
+                    <img src="{{ asset('assets/images/icons/whatsapp.svg') }}" alt="icon" />
                 </div>
                 <span>Konsultasi</span>
             </a>

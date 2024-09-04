@@ -93,13 +93,13 @@
             <a href="#"
                 class="rounded-full p-[12px_22px] flex gap-[10px] font-semibold transition-all duration-300 border border-[#EEF0F7] hover:ring-2 hover:ring-[#FF6B18]">About
                 Us</a>
-            <a href="#"
+            <a href="{{ route('front.report') }}"
                 class="rounded-full p-[12px_22px] flex gap-[10px] font-semibold transition-all duration-300 border border-[#EEF0F7] hover:ring-2 hover:ring-[#FF6B18]">Lapor
                 Bullying</a>
             <a href="#"
                 class="rounded-full p-[12px_22px] flex gap-[10px] font-bold transition-all duration-300 bg-[#FF6B18] text-white hover:shadow-[0_10px_20px_0_#FF6B1880]">
                 <div class="w-6 h-6 flex shrink-0">
-                    <img src="{{ asset('assets/images/icons/favorite-chart.svg') }}" alt="icon" />
+                    <img src="{{ asset('assets/images/icons/whatsapp.svg') }}" alt="icon" />
                 </div>
                 <span>Konsultasi</span>
             </a>
@@ -135,7 +135,7 @@
         </div>
 
         <div class="container-right">
-            <img class="container" src="{{asset('assets/images/photos/photo.png')}}" width="450px" height="500px">
+            <img class="container" src="{{ asset('assets/images/photos/photo.png') }}" width="450px" height="500px">
         </div>
     </div>
     <div class="vid">
