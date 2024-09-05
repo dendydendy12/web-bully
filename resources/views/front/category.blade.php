@@ -12,7 +12,7 @@
     <article>
         <section id="Category-result" class="max-w-[1130px] mx-auto flex items-center flex-col gap-[30px] mt-[70px]">
             <h1 class="text-4xl leading-[45px] font-bold text-center">
-                J <br />
+                Jelajahi beragam konten <br/>yang menarik dan relevan. <br />
                 {{ $category->name }}
             </h1>
             @if ($category->slug == 'video')

@@ -175,10 +175,9 @@
         <!-- Navigation Links -->
         <div class="menu nav-links" style="z-index: 1;">
             <a href="/"
-                class="rounded-full p-[12px_22px] flex gap-[10px] font-semibold transition-all duration-300 border border-[#EEF0F7] hover:ring-2 hover:ring-[#FF6B18]">Home</a>
+                class="rounded-full p-[12px_22px] flex gap-[10px] font-semibold transition-all duration-300 border border-[#EEF0F7] hover:ring-2 hover:ring-[#FF6B18]">Beranda</a>
             <a href="/about"
-                class="rounded-full p-[12px_22px] flex gap-[10px] font-semibold transition-all duration-300 border border-[#EEF0F7] hover:ring-2 hover:ring-[#FF6B18]">About
-                Us</a>
+                class="rounded-full p-[12px_22px] flex gap-[10px] font-semibold transition-all duration-300 border border-[#EEF0F7] hover:ring-2 hover:ring-[#FF6B18]">Tentang Kami</a>
             <a href="{{ route('front.report') }}"
                 class="rounded-full p-[12px_22px] flex gap-[10px] font-semibold transition-all duration-300 border border-[#EEF0F7] hover:ring-2 hover:ring-[#FF6B18]">
                 Lapor
@@ -188,7 +187,7 @@
                 <div class="w-6 h-6 flex shrink-0">
                     <img src="{{ asset('assets/images/icons/donate.svg') }}" alt="icon" />
                 </div>
-                <span>Donate</span>
+                <span>Donasi</span>
             </button>
             <button id="waModalBtn"
                 class="rounded-full p-[12px_22px] flex gap-[10px] font-bold transition-all duration-300 bg-[#FF6B18] text-white hover:shadow-[0_10px_20px_0_#FF6B1880] ml-4">
@@ -228,7 +227,7 @@
                 <div style="margin: 1rem;">
                     <div style="display: flex; justify-content:space-between; align-items: center; margin-bottom: 2rem;">
                         <div style="width: 10%;">
-                            <img src="{{asset('assets/images/photos/iburifa.jpg')}}" alt="" style="border-radius: 50%; width: 4rem; height:5rem" alt="" style="border-radius: 50%; width: 100%;">
+                            <img src="{{asset('assets/images/photos/paksudirman.jpg')}}" alt="" style="border-radius: 50%; width: 4rem; height:5rem" alt="" style="border-radius: 50%; width: 100%;">
                         </div>
                         <div style="width: 70%">
                             <p>Drs. Sudirman, MM.</p>
@@ -246,7 +245,7 @@
                 <div style="margin: 1rem;">
                     <div style="display: flex; justify-content:space-between; align-items: center; margin-bottom: 2rem;">
                         <div style="width: 10%;">
-                            <img src="{{asset('assets/images/photos/iburifa.jpg')}}" alt="" style="border-radius: 50%; width: 4rem; height:5rem" alt="" style="border-radius: 50%; width: 100%;">
+                            <img src="{{asset('assets/images/photos/pakbudi.jpg')}}" alt="" style="border-radius: 50%; width: 4rem; height:5rem" alt="" style="border-radius: 50%; width: 100%;">
                         </div>
                         <div style="width: 70%">
                             <p>Budiman Firdaus, M.Pd.</p>
