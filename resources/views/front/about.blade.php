@@ -44,7 +44,7 @@
         </div>
 
         <div class="card-group">
-            <div class="card">
+            <div class="card1">
                 <div class="card-img">
                     <img src="{{ asset('assets/images/photos/rizki.jpg') }}" width="100px" height="200px">
                 </div>
@@ -62,7 +62,7 @@
                 </div>
             </div>
 
-            <div class="card">
+            <div class="card1">
                 <div class="card-img">
                     <img src="{{ asset('assets/images/photos/dendy.jpg') }}" width="150px" height="200px">
                 </div>

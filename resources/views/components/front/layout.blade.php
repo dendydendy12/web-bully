@@ -225,7 +225,7 @@
                     
                 </div>
                 <div style="margin: 1rem;">
-                    <div style="display: flex; justify-content:space-between; align-items: center; margin-bottom: 2rem;">
+                    <div style="display: flex; justify-content:space-between; align-items: center; margin-bottom: 10px; margin-right:1rem;">
                         <div style="width: 10%;">
                             <img src="{{asset('assets/images/photos/paksudirman.jpg')}}" alt="" style="border-radius: 50%; width: 4rem; height:5rem" alt="" style="border-radius: 50%; width: 100%;">
                         </div>
@@ -243,7 +243,7 @@
                     </div>
                 <hr>
                 <div style="margin: 1rem;">
-                    <div style="display: flex; justify-content:space-between; align-items: center; margin-bottom: 2rem;">
+                    <div style="display: flex; justify-content:space-between; align-items: center; margin-bottom: 1rem;">
                         <div style="width: 10%;">
                             <img src="{{asset('assets/images/photos/pakbudi.jpg')}}" alt="" style="border-radius: 50%; width: 4rem; height:5rem" alt="" style="border-radius: 50%; width: 100%;">
                         </div>
@@ -253,7 +253,7 @@
                                 possimus voluptates illum similique odio illo eaque molestias voluptatum inventore, soluta
                                 ut voluptas tempore impedit repellendus, saepe magni.</small>
                         </div>
-    
+              
                         <div style="width: 18%;">
                             <a href="https:wa.me/622345678867" target="_blank" class="btn">Chat</a>
                         </div>
@@ -263,6 +263,8 @@
         </div>
     </div>
     </div>
+    </div>
+    
 </div>
     <!-- The Modal for Donate -->
     <div id="donateModal" class="modal">
